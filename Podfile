@@ -1,6 +1,4 @@
 # platfom :ios
-target ‘SwiftBase’ do 
-	pod ‘AFNetworking’
-	pod ‘JSONKit’
-	pod ’SDWebImage’
+target 'SwiftBase' do
+	
 end
