@@ -15,18 +15,30 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var isFlag = [Bool](count: 5, repeatedValue: false)
     var tableView = UITableView()
     
+    var bottomView = NSBundle.mainBundle().loadNibNamed("BottomView", owner: nil, options: nil).first as? BottomView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor .orangeColor();
         
         self.navigationItem.title = "首页";
         
-        tableView = UITableView(frame: UIScreen .mainScreen().bounds,style: UITableViewStyle.Grouped)
+        self.createTableView()
+        self.createBottomView()
+        
+    }
+    
+    func createTableView(){
+        tableView = UITableView(frame: UIScreen.mainScreen().bounds,style: UITableViewStyle.Grouped)
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
     }
     
+    func createBottomView(){
+        bottomView?.frame = CGRectMake(0, UIScreen.mainScreen().bounds.size.height - 100, UIScreen.mainScreen().bounds.size.width, 100)
+        self.view.addSubview(bottomView!)
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
