@@ -27,14 +27,14 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="促进幼儿五大发育系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkR-eg-Um7">
-                                <rect key="frame" x="102" y="65" width="170" height="20"/>
+                                <rect key="frame" x="102" y="57" width="110" height="13"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HiraginoSansGB-W3" family="Hiragino Sans GB" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSansGB-W3" family="Hiragino Sans GB" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-jT-cNE">
-                                <rect key="frame" x="232" y="40" width="79" height="31"/>
+                                <rect key="frame" x="216" y="40" width="95" height="31"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HiraginoSansGB-W3" family="Hiragino Sans GB" pointSize="16"/>
                                 <state key="normal" title="免费体验">
@@ -42,24 +42,35 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精品托班" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYP-VY-mU5">
-                                <rect key="frame" x="102" y="16" width="116" height="34"/>
+                                <rect key="frame" x="102" y="21" width="72" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HiraginoSansGB-W3" family="Hiragino Sans GB" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSansGB-W3" family="Hiragino Sans GB" pointSize="18"/>
+                                <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgm-Zg-MKM">
+                                <rect key="frame" x="0.0" y="110" width="316" height="0.0"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Yke-Fd-4sO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gkR-eg-Um7" firstAttribute="leading" secondItem="JFK-Wg-ocJ" secondAttribute="trailing" constant="18" id="6GR-Ob-QAH"/>
                             <constraint firstItem="JFK-Wg-ocJ" firstAttribute="leading" secondItem="Rxp-qO-d5A" secondAttribute="leading" id="6kh-jK-IvF"/>
+                            <constraint firstAttribute="trailing" secondItem="Pgm-Zg-MKM" secondAttribute="trailing" id="8Ae-AS-LSJ"/>
                             <constraint firstAttribute="trailing" secondItem="eqh-jT-cNE" secondAttribute="trailing" constant="5" id="ERm-4w-5T1"/>
                             <constraint firstItem="JFK-Wg-ocJ" firstAttribute="top" secondItem="Rxp-qO-d5A" secondAttribute="top" constant="16" id="FfO-FC-yOl"/>
-                            <constraint firstItem="eqh-jT-cNE" firstAttribute="width" secondItem="Rxp-qO-d5A" secondAttribute="width" multiplier="0.25" id="IQK-4g-yov"/>
+                            <constraint firstItem="eqh-jT-cNE" firstAttribute="width" secondItem="Rxp-qO-d5A" secondAttribute="width" multiplier="0.3" id="IQK-4g-yov"/>
                             <constraint firstItem="gkR-eg-Um7" firstAttribute="top" secondItem="bYP-VY-mU5" secondAttribute="bottom" constant="15" id="Ohl-xe-WBd"/>
+                            <constraint firstItem="Pgm-Zg-MKM" firstAttribute="leading" secondItem="Rxp-qO-d5A" secondAttribute="leading" id="W38-l2-tTJ"/>
                             <constraint firstItem="eqh-jT-cNE" firstAttribute="centerY" secondItem="Rxp-qO-d5A" secondAttribute="centerY" id="bx9-Aa-eoa"/>
-                            <constraint firstItem="bYP-VY-mU5" firstAttribute="top" secondItem="Rxp-qO-d5A" secondAttribute="top" constant="16" id="jWK-rT-cuf"/>
+                            <constraint firstItem="bYP-VY-mU5" firstAttribute="top" secondItem="Rxp-qO-d5A" secondAttribute="top" constant="21" id="jWK-rT-cuf"/>
+                            <constraint firstAttribute="bottom" secondItem="Pgm-Zg-MKM" secondAttribute="bottom" id="jv0-Gw-0na"/>
                             <constraint firstAttribute="bottom" secondItem="JFK-Wg-ocJ" secondAttribute="bottom" constant="16" id="q2X-oR-oh2"/>
                             <constraint firstItem="bYP-VY-mU5" firstAttribute="leading" secondItem="JFK-Wg-ocJ" secondAttribute="trailing" constant="18" id="tNQ-M2-ip9"/>
                         </constraints>
@@ -74,6 +85,10 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="freeBtn" destination="eqh-jT-cNE" id="mY2-mZ-buK"/>
+                <outlet property="imageInfo" destination="JFK-Wg-ocJ" id="GJm-zu-7Yi"/>
+            </connections>
             <point key="canvasLocation" x="283" y="455.5"/>
         </tableViewCell>
     </objects>

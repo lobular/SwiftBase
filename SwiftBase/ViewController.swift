@@ -20,9 +20,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor .orangeColor();
         
         self.navigationItem.title = "首页";
+        self.view.backgroundColor = colorWithHexString("f2f2f2")
         
         self.createTableView()
         self.createBottomView()
@@ -30,6 +30,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         /*   自定义cell注册   */
         let cellIndentifier = "mycell";
         tableView.registerNib(UINib(nibName: "ViewCell", bundle: nil), forCellReuseIdentifier:cellIndentifier)
+        
+        tableView.registerNib(UINib(nibName: "ImageViewCell", bundle: nil), forCellReuseIdentifier: "imagecell")
         
     }
     
@@ -56,7 +58,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     
     func createTableView(){
-        tableView = UITableView(frame: UIScreen.mainScreen().bounds,style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame:CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height - 100) ,style: UITableViewStyle.Grouped)
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -68,7 +71,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2;
+        return 3;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -87,54 +90,77 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             }
             return cell
         }
+        if(indexPath.section == 1){
+            let identifier = "imagecell"
+            let cell:ImageViewCell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)as!ImageViewCell
+            cell.backgroundColor = colorWithHexString("f2f2f2")
+            return cell;
+        }
         //自定义cell
         let cell:ViewCell = tableView.dequeueReusableCellWithIdentifier("mycell",forIndexPath: indexPath)as! ViewCell
         cell.backgroundColor = colorWithHexString("f2f2f2")
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.imageInfo.image = UIImage(named: image[indexPath.row])
+        cell.freeBtn.addTarget(self, action: Selector("LogAction"), forControlEvents: UIControlEvents.TouchUpInside)
         return cell
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? imageName.count : 2;
+        return section == 1 ? 1 : imageName.count ;
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 50 :90
+        if(indexPath.section == 1){
+            return 84;
+        }
+        if(indexPath.section == 0 ){
+            return 50
+        }
+        return 90
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //使用闭包，和嵌套函数或者JAVA中的匿名类类似
-        let locationActionHandler = {(action: UIAlertAction!) -> Void in
-            let locationAlertController = UIAlertController(title: nil, message: "我是搞笑\(indexPath.row + 1)", preferredStyle: UIAlertControllerStyle.Alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-            
-            locationAlertController.addAction(okAction)
-            self.presentViewController(locationAlertController, animated: true, completion: nil)
-            
+        if (indexPath.section == 0){
+                //使用闭包，和嵌套函数或者JAVA中的匿名类类似
+                let locationActionHandler = {(action: UIAlertAction!) -> Void in
+                    let locationAlertController = UIAlertController(title: nil, message: "我是搞笑\(indexPath.row + 1)", preferredStyle: UIAlertControllerStyle.Alert)
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    
+                    locationAlertController.addAction(okAction)
+                    self.presentViewController(locationAlertController, animated: true, completion: nil)
+                    
+                }
+                let alertController = UIAlertController(title: "搞笑图\(indexPath.row + 1)", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+                let cancleAction = UIAlertAction(title: "Cancle", style: UIAlertActionStyle.Cancel, handler: nil)
+                alertController.addAction(cancleAction)
+                
+                let locationAction = UIAlertAction(title: "选我喽", style: UIAlertActionStyle.Default, handler: locationActionHandler)
+                alertController.addAction(locationAction)
+                
+                let markAction = UIAlertAction(title: "标记我一下嘛", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction) -> Void in
+                    let cell = tableView.cellForRowAtIndexPath(indexPath)
+                    //此时可以将图片标记为勾，但是当往下拖动图片之前被标记的勾消失，是因为每次只加载出现在屏幕上的，其它都放在缓存池
+                    cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+                    self.isFlag[indexPath.row] = true//然后每次加载时候在cellForRowAtIndexPath方法进行判断
+                })
+                alertController.addAction(markAction)
+                presentViewController(alertController, animated: true, completion: nil)
         }
-        let alertController = UIAlertController(title: "搞笑图\(indexPath.row + 1)", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-        let cancleAction = UIAlertAction(title: "Cancle", style: UIAlertActionStyle.Cancel, handler: nil)
-        alertController.addAction(cancleAction)
-        
-        let locationAction = UIAlertAction(title: "选我喽", style: UIAlertActionStyle.Default, handler: locationActionHandler)
-        alertController.addAction(locationAction)
-        
-        let markAction = UIAlertAction(title: "标记我一下嘛", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction) -> Void in
-            let cell = tableView.cellForRowAtIndexPath(indexPath)
-            //此时可以将图片标记为勾，但是当往下拖动图片之前被标记的勾消失，是因为每次只加载出现在屏幕上的，其它都放在缓存池
-            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-            self.isFlag[indexPath.row] = true//然后每次加载时候在cellForRowAtIndexPath方法进行判断
-        })
-        alertController.addAction(markAction)
-        presentViewController(alertController, animated: true, completion: nil)
     }
+    
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
+        return 10
+    }
+    
+    
+    func LogAction(){
+        NSLog("你不可以免费体验噢!")
     }
     
     override func didReceiveMemoryWarning() {
