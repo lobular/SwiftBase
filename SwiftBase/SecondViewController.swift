@@ -14,14 +14,6 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
      var tableView = UITableView()
     var thirdView = ThirdViewController()
     
-    override func viewWillAppear(animated: Bool) {
-        self.tabBarController?.tabBar.hidden = false
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        self.tabBarController?.tabBar.hidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var tableView = UITableView()
     
     var bottomView = NSBundle.mainBundle().loadNibNamed("BottomView", owner: nil, options: nil).first as? BottomView
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,33 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.createTableView()
         self.createBottomView()
         
+        /*   自定义cell注册   */
+        let cellIndentifier = "mycell";
+        tableView.registerNib(UINib(nibName: "ViewCell", bundle: nil), forCellReuseIdentifier:cellIndentifier)
+        
     }
+    
+    //把16进制的颜色转化成color
+    func colorWithHexString (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substringFromIndex(1)
+        }
+        
+        let rString = (cString as NSString).substringToIndex(2)
+        let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+        let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+        
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        NSScanner(string: rString).scanHexInt(&r)
+        NSScanner(string: gString).scanHexInt(&g)
+        NSScanner(string: bString).scanHexInt(&b)
+        
+        
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
+    }
+    
     
     func createTableView(){
         tableView = UITableView(frame: UIScreen.mainScreen().bounds,style: UITableViewStyle.Grouped)
@@ -41,31 +68,38 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+        return 2;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let initIdentifier = "cell"
-        let cell = UITableViewCell(style:UITableViewCellStyle.Subtitle,reuseIdentifier: initIdentifier)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
-        cell.textLabel?.text = imageName[indexPath.row]
-        cell.detailTextLabel?.text = "imageName\(indexPath.row + 1)"
-        cell.imageView?.image = UIImage(named:image[indexPath.row])
-        cell.accessoryType = UITableViewCellAccessoryType.DetailButton
-        if isFlag[indexPath.row]{
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }else{
-            cell.accessoryType = UITableViewCellAccessoryType.None
+        if(indexPath.section == 0){
+            let initIdentifier = "cell"
+            let cell = UITableViewCell(style:UITableViewCellStyle.Subtitle,reuseIdentifier: initIdentifier)
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.textLabel?.text = imageName[indexPath.row]
+            cell.detailTextLabel?.text = "imageName\(indexPath.row + 1)"
+            cell.imageView?.image = UIImage(named:image[indexPath.row])
+            cell.accessoryType = UITableViewCellAccessoryType.DetailButton
+            if isFlag[indexPath.row]{
+                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            }else{
+                cell.accessoryType = UITableViewCellAccessoryType.None
+            }
+            return cell
         }
+        //自定义cell
+        let cell:ViewCell = tableView.dequeueReusableCellWithIdentifier("mycell",forIndexPath: indexPath)as! ViewCell
+        cell.backgroundColor = colorWithHexString("f2f2f2")
         return cell
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imageName.count;
+        return section == 0 ? imageName.count : 2;
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return indexPath.section == 0 ? 50 :90
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

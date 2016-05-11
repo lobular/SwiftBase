@@ -10,6 +10,8 @@
 		CCE4D12C72BBC53FB3D7E1C8 /* libPods-SwiftBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E65533417F4FACAF043E936B /* libPods-SwiftBase.a */; };
 		EE16A5A41CDC339700788ACF /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE16A5A31CDC339700788ACF /* BottomView.swift */; };
 		EE16A5A61CDC34B800788ACF /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE16A5A51CDC34B800788ACF /* BottomView.xib */; };
+		EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE309CB41CE1CE9F0038610C /* ViewCell.swift */; };
+		EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE309CB51CE1CE9F0038610C /* ViewCell.xib */; };
 		EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1D1CD3103700133034 /* AppDelegate.swift */; };
 		EE71AF201CD3103700133034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1F1CD3103700133034 /* ViewController.swift */; };
 		EE71AF251CD3103700133034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF241CD3103700133034 /* Assets.xcassets */; };
@@ -19,16 +21,6 @@
 		EE71AF3F1CD3119100133034 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF3B1CD3119100133034 /* SecondViewController.swift */; };
 		EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF3C1CD3119100133034 /* TabBarViewController.swift */; };
 		EE71AF421CD311B500133034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF411CD311B500133034 /* Main.storyboard */; };
-		EE71AF4D1CD311F000133034 /* 搜索@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF431CD311F000133034 /* 搜索@3x.png */; };
-		EE71AF4E1CD311F000133034 /* 搜索框内图标@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF441CD311F000133034 /* 搜索框内图标@3x.png */; };
-		EE71AF4F1CD311F000133034 /* emptyStart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF451CD311F000133034 /* emptyStart@3x.png */; };
-		EE71AF501CD311F000133034 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF461CD311F000133034 /* image1.jpg */; };
-		EE71AF511CD311F000133034 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF471CD311F000133034 /* image1.png */; };
-		EE71AF521CD311F000133034 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF481CD311F000133034 /* image2.jpg */; };
-		EE71AF531CD311F000133034 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF491CD311F000133034 /* image3.jpg */; };
-		EE71AF541CD311F000133034 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF4A1CD311F000133034 /* image4.jpg */; };
-		EE71AF551CD311F000133034 /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF4B1CD311F000133034 /* image5.jpg */; };
-		EE71AF561CD311F000133034 /* start@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF4C1CD311F000133034 /* start@3x.png */; };
 		EE71AF581CD32F7600133034 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF571CD32F7600133034 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +30,9 @@
 		E65533417F4FACAF043E936B /* libPods-SwiftBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE16A5A31CDC339700788ACF /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		EE16A5A51CDC34B800788ACF /* BottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomView.xib; sourceTree = "<group>"; };
+		EE309CB11CE1BF880038610C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		EE309CB41CE1CE9F0038610C /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		EE309CB51CE1CE9F0038610C /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
 		EE71AF1A1CD3103700133034 /* SwiftBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE71AF1D1CD3103700133034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE71AF1F1CD3103700133034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,16 +44,6 @@
 		EE71AF3B1CD3119100133034 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EE71AF3C1CD3119100133034 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EE71AF411CD311B500133034 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		EE71AF431CD311F000133034 /* 搜索@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索@3x.png"; sourceTree = "<group>"; };
-		EE71AF441CD311F000133034 /* 搜索框内图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索框内图标@3x.png"; sourceTree = "<group>"; };
-		EE71AF451CD311F000133034 /* emptyStart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emptyStart@3x.png"; sourceTree = "<group>"; };
-		EE71AF461CD311F000133034 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
-		EE71AF471CD311F000133034 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
-		EE71AF481CD311F000133034 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
-		EE71AF491CD311F000133034 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
-		EE71AF4A1CD311F000133034 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
-		EE71AF4B1CD311F000133034 /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
-		EE71AF4C1CD311F000133034 /* start@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@3x.png"; sourceTree = "<group>"; };
 		EE71AF571CD32F7600133034 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				EE71AF1D1CD3103700133034 /* AppDelegate.swift */,
+				EE309CB11CE1BF880038610C /* Header.h */,
 				EE71AF1F1CD3103700133034 /* ViewController.swift */,
+				EE309CB41CE1CE9F0038610C /* ViewCell.swift */,
+				EE309CB51CE1CE9F0038610C /* ViewCell.xib */,
 				EE71AF3C1CD3119100133034 /* TabBarViewController.swift */,
 				EE71AF3B1CD3119100133034 /* SecondViewController.swift */,
 				EE71AF391CD3119100133034 /* SecondTableViewCell.swift */,
@@ -122,16 +110,6 @@
 				EE16A5A31CDC339700788ACF /* BottomView.swift */,
 				EE16A5A51CDC34B800788ACF /* BottomView.xib */,
 				EE71AF411CD311B500133034 /* Main.storyboard */,
-				EE71AF431CD311F000133034 /* 搜索@3x.png */,
-				EE71AF441CD311F000133034 /* 搜索框内图标@3x.png */,
-				EE71AF451CD311F000133034 /* emptyStart@3x.png */,
-				EE71AF461CD311F000133034 /* image1.jpg */,
-				EE71AF471CD311F000133034 /* image1.png */,
-				EE71AF481CD311F000133034 /* image2.jpg */,
-				EE71AF491CD311F000133034 /* image3.jpg */,
-				EE71AF4A1CD311F000133034 /* image4.jpg */,
-				EE71AF4B1CD311F000133034 /* image5.jpg */,
-				EE71AF4C1CD311F000133034 /* start@3x.png */,
 				EE71AF241CD3103700133034 /* Assets.xcassets */,
 				EE71AF261CD3103700133034 /* LaunchScreen.storyboard */,
 				EE71AF291CD3103700133034 /* Info.plist */,
@@ -201,20 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE71AF281CD3103700133034 /* LaunchScreen.storyboard in Resources */,
-				EE71AF551CD311F000133034 /* image5.jpg in Resources */,
 				EE16A5A61CDC34B800788ACF /* BottomView.xib in Resources */,
-				EE71AF4E1CD311F000133034 /* 搜索框内图标@3x.png in Resources */,
-				EE71AF4F1CD311F000133034 /* emptyStart@3x.png in Resources */,
-				EE71AF511CD311F000133034 /* image1.png in Resources */,
+				EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */,
 				EE71AF421CD311B500133034 /* Main.storyboard in Resources */,
 				EE71AF251CD3103700133034 /* Assets.xcassets in Resources */,
-				EE71AF531CD311F000133034 /* image3.jpg in Resources */,
-				EE71AF561CD311F000133034 /* start@3x.png in Resources */,
-				EE71AF521CD311F000133034 /* image2.jpg in Resources */,
-				EE71AF541CD311F000133034 /* image4.jpg in Resources */,
-				EE71AF501CD311F000133034 /* image1.jpg in Resources */,
 				EE71AF3E1CD3119100133034 /* SecondTableViewCell.xib in Resources */,
-				EE71AF4D1CD311F000133034 /* 搜索@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +246,7 @@
 				EE71AF201CD3103700133034 /* ViewController.swift in Sources */,
 				EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */,
 				EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */,
+				EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */,
 				EE16A5A41CDC339700788ACF /* BottomView.swift in Sources */,
 				EE71AF581CD32F7600133034 /* ThirdViewController.swift in Sources */,
 				EE71AF3D1CD3119100133034 /* SecondTableViewCell.swift in Sources */,
