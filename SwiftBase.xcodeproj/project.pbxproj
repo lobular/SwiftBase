@@ -22,6 +22,8 @@
 		EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF3C1CD3119100133034 /* TabBarViewController.swift */; };
 		EE71AF421CD311B500133034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF411CD311B500133034 /* Main.storyboard */; };
 		EE71AF581CD32F7600133034 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF571CD32F7600133034 /* ThirdViewController.swift */; };
+		EE9E541D1CE30DDB0036B936 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */; };
+		EE9E541E1CE30DDB0036B936 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		EE71AF3C1CD3119100133034 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EE71AF411CD311B500133034 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EE71AF571CD32F7600133034 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				EE71AF1F1CD3103700133034 /* ViewController.swift */,
 				EE309CB41CE1CE9F0038610C /* ViewCell.swift */,
 				EE309CB51CE1CE9F0038610C /* ViewCell.xib */,
+				EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */,
+				EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */,
 				EE71AF3C1CD3119100133034 /* TabBarViewController.swift */,
 				EE71AF3B1CD3119100133034 /* SecondViewController.swift */,
 				EE71AF391CD3119100133034 /* SecondTableViewCell.swift */,
@@ -183,6 +189,7 @@
 				EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */,
 				EE71AF421CD311B500133034 /* Main.storyboard in Resources */,
 				EE71AF251CD3103700133034 /* Assets.xcassets in Resources */,
+				EE9E541E1CE30DDB0036B936 /* ImageViewCell.xib in Resources */,
 				EE71AF3E1CD3119100133034 /* SecondTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE71AF3F1CD3119100133034 /* SecondViewController.swift in Sources */,
+				EE9E541D1CE30DDB0036B936 /* ImageViewCell.swift in Sources */,
 				EE71AF201CD3103700133034 /* ViewController.swift in Sources */,
 				EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */,
 				EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */,
