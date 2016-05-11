@@ -12,6 +12,7 @@
 		EE16A5A61CDC34B800788ACF /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE16A5A51CDC34B800788ACF /* BottomView.xib */; };
 		EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE309CB41CE1CE9F0038610C /* ViewCell.swift */; };
 		EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE309CB51CE1CE9F0038610C /* ViewCell.xib */; };
+		EE55A22C1CE31B0A00BE0177 /* CustomObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */; };
 		EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1D1CD3103700133034 /* AppDelegate.swift */; };
 		EE71AF201CD3103700133034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1F1CD3103700133034 /* ViewController.swift */; };
 		EE71AF251CD3103700133034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF241CD3103700133034 /* Assets.xcassets */; };
@@ -26,6 +27,19 @@
 		EE9E541E1CE30DDB0036B936 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EE9E543B1CE30FEA0036B936 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		247E6D7CFAD2E3FDD1A0418E /* Pods-SwiftBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBase/Pods-SwiftBase.debug.xcconfig"; sourceTree = "<group>"; };
 		2DCA007AF86270A7E5CFE637 /* Pods-SwiftBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBase/Pods-SwiftBase.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +49,7 @@
 		EE309CB11CE1BF880038610C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		EE309CB41CE1CE9F0038610C /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		EE309CB51CE1CE9F0038610C /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
+		EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObj.swift; sourceTree = "<group>"; };
 		EE71AF1A1CD3103700133034 /* SwiftBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE71AF1D1CD3103700133034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE71AF1F1CD3103700133034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +118,7 @@
 			children = (
 				EE71AF1D1CD3103700133034 /* AppDelegate.swift */,
 				EE309CB11CE1BF880038610C /* Header.h */,
+				EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */,
 				EE71AF1F1CD3103700133034 /* ViewController.swift */,
 				EE309CB41CE1CE9F0038610C /* ViewCell.swift */,
 				EE309CB51CE1CE9F0038610C /* ViewCell.xib */,
@@ -136,6 +152,7 @@
 				EE71AF181CD3103700133034 /* Resources */,
 				A457EC077C815FD3826A2A62 /* 📦 Embed Pods Frameworks */,
 				09092613DACB36477E510180 /* 📦 Copy Pods Resources */,
+				EE9E543B1CE30FEA0036B936 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +270,7 @@
 				EE9E541D1CE30DDB0036B936 /* ImageViewCell.swift in Sources */,
 				EE71AF201CD3103700133034 /* ViewController.swift in Sources */,
 				EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */,
+				EE55A22C1CE31B0A00BE0177 /* CustomObj.swift in Sources */,
 				EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */,
 				EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */,
 				EE16A5A41CDC339700788ACF /* BottomView.swift in Sources */,
@@ -361,6 +379,7 @@
 			baseConfigurationReference = 247E6D7CFAD2E3FDD1A0418E /* Pods-SwiftBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SwiftBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pengxiuxiu.SwiftBase;
@@ -373,6 +392,7 @@
 			baseConfigurationReference = 2DCA007AF86270A7E5CFE637 /* Pods-SwiftBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SwiftBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pengxiuxiu.SwiftBase;
