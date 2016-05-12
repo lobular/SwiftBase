@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var imageName = ["image1","image2","image3","image4","image5"]
-    var image = ["image1.jpg","image2.jpg","image3.jpg","image4.jpg","image5.jpg"]
+    var image = ["1","2","3","4","5"]
     var isFlag = [Bool](count: 5, repeatedValue: false)
     var tableView = UITableView()
+    var alertView = UIAlertController()
+
     
     var bottomView = NSBundle.mainBundle().loadNibNamed("BottomView", owner: nil, options: nil).first as? BottomView
 
@@ -32,6 +34,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         tableView.registerNib(UINib(nibName: "ViewCell", bundle: nil), forCellReuseIdentifier:cellIndentifier)
         
         tableView.registerNib(UINib(nibName: "ImageViewCell", bundle: nil), forCellReuseIdentifier: "imagecell")
+        
+        //接收通知
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name: "tipWhich", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name:"tipWhich", object: nil)
+
         
     }
     
@@ -161,6 +168,35 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func LogAction(){
         NSLog("你不可以免费体验噢!")
+    }
+    
+    func respondsFromTip(notification:NSNotification){
+        let num = notification.object?.valueForKey("num") as? String
+        self.alerAction(NSInteger(num!)! - 1000)
+    }
+    
+    func alerAction(num:NSInteger){
+        if(num == 0){
+             alertView = UIAlertController(title: "心灵", message: "我们渐行渐远，时间治愈了我们的感情，say bye!", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alertView, animated: true, completion: nil)
+        }
+        if (num == 1){
+             alertView = UIAlertController(title: "放弃", message: "频繁回头的人走不了多远，我决定跟你say goodbye!", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alertView, animated: true, completion: nil)
+        }
+        if(num == 2){
+            alertView = UIAlertController(title: "你太执着", message: "你选择放弃，我从你，只要你不后悔，我也不会后悔的往前大步跨去!", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alertView, animated: true, completion: nil)
+        }
+        if(num == 3){
+            alertView = UIAlertController(title: "我可以活的完美", message: "即使没有你，我也可以活的漂亮!", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alertView, animated: true, completion: nil)
+        }
+        alertView.addAction(UIAlertAction(title: "放弃...", style: UIAlertActionStyle.Default,handler: nil))
+    }
+    
+    func Dismiss(){
+         self.presentViewController(alertView, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
