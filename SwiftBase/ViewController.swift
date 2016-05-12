@@ -17,6 +17,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var tableView = UITableView()
     var alertView = UIAlertController()
     
+    var second = SecondViewController()
+    
     var bottomView = NSBundle.mainBundle().loadNibNamed("BottomView", owner: nil, options: nil).first as? BottomView
 
     
@@ -167,7 +169,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     
     func LogAction(){
-        NSLog("你不可以免费体验噢!")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        second = storyBoard.instantiateViewControllerWithIdentifier("second")as!SecondViewController
+            self.navigationController!.pushViewController(second, animated: true)
+
     }
     
     /*******///通知传值
