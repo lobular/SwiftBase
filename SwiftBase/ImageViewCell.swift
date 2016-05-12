@@ -18,6 +18,7 @@ class ImageViewCell: UITableViewCell {
     
     @IBOutlet weak var imageScroll: UIScrollView!
     
+    var delegate:ImageScrollDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,11 +56,14 @@ class ImageViewCell: UITableViewCell {
     }
     
     func tapAction(send:UITapGestureRecognizer){
-        let dic = ["num": String(send.view!.tag)]
-        NSNotificationCenter.defaultCenter().postNotificationName("tipWhich", object: dic)
+        self.delegate!.responseFromTip(send.view!.tag)
+//        let dic = ["num": String(send.view!.tag)]
+//        NSNotificationCenter.defaultCenter().postNotificationName("tipWhich", object: dic)
 
     }
 
+    
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

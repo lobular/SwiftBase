@@ -7,15 +7,15 @@
 //
 
 import UIKit
+//import Foundation
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,ImageScrollDelegate{
+
     var imageName = ["image1","image2","image3","image4","image5"]
     var image = ["1","2","3","4","5"]
     var isFlag = [Bool](count: 5, repeatedValue: false)
     var tableView = UITableView()
     var alertView = UIAlertController()
-
     
     var bottomView = NSBundle.mainBundle().loadNibNamed("BottomView", owner: nil, options: nil).first as? BottomView
 
@@ -36,8 +36,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         tableView.registerNib(UINib(nibName: "ImageViewCell", bundle: nil), forCellReuseIdentifier: "imagecell")
         
         //接收通知
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name: "tipWhich", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name:"tipWhich", object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name:"tipWhich", object: nil)
 
         
     }
@@ -101,6 +100,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let identifier = "imagecell"
             let cell:ImageViewCell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)as!ImageViewCell
             cell.backgroundColor = colorWithHexString("f2f2f2")
+            cell.delegate = self;
             return cell;
         }
         //自定义cell
@@ -170,10 +170,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         NSLog("你不可以免费体验噢!")
     }
     
-    func respondsFromTip(notification:NSNotification){
-        let num = notification.object?.valueForKey("num") as? String
-        self.alerAction(NSInteger(num!)! - 1000)
+    /*******///通知传值
+//    func respondsFromTip(notification:NSNotification){
+//        let num = notification.object?.valueForKey("num") as? String
+//        self.alerAction(NSInteger(num!)! - 1000)
+//    }
+    
+    /******///代理协议传值
+    func responseFromTip(num: NSInteger) {
+        self.alerAction(num - 1000)
     }
+    
     
     func alerAction(num:NSInteger){
         if(num == 0){
@@ -198,7 +205,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func Dismiss(){
          self.presentViewController(alertView, animated: true, completion: nil)
     }
+    /*******/
     
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
