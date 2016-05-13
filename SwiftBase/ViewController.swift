@@ -37,6 +37,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         tableView.registerNib(UINib(nibName: "ImageViewCell", bundle: nil), forCellReuseIdentifier: "imagecell")
         
+        tableView.registerNib(UINib(nibName: "ButtonViewCell", bundle: nil), forCellReuseIdentifier: "btn")
+        
         //接收通知
 //        NSNotificationCenter.defaultCenter().addObserver(self, selector: "respondsFromTip:", name:"tipWhich", object: nil)
 
@@ -84,19 +86,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if(indexPath.section == 0){
-            let initIdentifier = "cell"
-            let cell = UITableViewCell(style:UITableViewCellStyle.Subtitle,reuseIdentifier: initIdentifier)
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
-            cell.textLabel?.text = imageName[indexPath.row]
-            cell.detailTextLabel?.text = "imageName\(indexPath.row + 1)"
-            cell.imageView?.image = UIImage(named:image[indexPath.row])
-            cell.accessoryType = UITableViewCellAccessoryType.DetailButton
-            if isFlag[indexPath.row]{
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-            }else{
-                cell.accessoryType = UITableViewCellAccessoryType.None
-            }
-            return cell
+//            let initIdentifier = "cell"
+//            let cell = UITableViewCell(style:UITableViewCellStyle.Subtitle,reuseIdentifier: initIdentifier)
+//            cell.selectionStyle = UITableViewCellSelectionStyle.None
+//            cell.textLabel?.text = imageName[indexPath.row]
+//            cell.detailTextLabel?.text = "imageName\(indexPath.row + 1)"
+//            cell.imageView?.image = UIImage(named:image[indexPath.row])
+//            cell.accessoryType = UITableViewCellAccessoryType.DetailButton
+//            if isFlag[indexPath.row]{
+//                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+//            }else{
+//                cell.accessoryType = UITableViewCellAccessoryType.None
+//            }
+//            return cell
+            let initIdentifier = "btn"
+            let cell:ButtonViewCell = tableView.dequeueReusableCellWithIdentifier(initIdentifier,forIndexPath: indexPath)as!ButtonViewCell
+            return cell;
         }
         if(indexPath.section == 1){
             let identifier = "imagecell"
@@ -116,6 +121,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section == 0) {
+            return 1;
+        }
         return section == 1 ? 1 : imageName.count ;
     }
     

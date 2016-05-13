@@ -23,6 +23,8 @@
 		EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF3C1CD3119100133034 /* TabBarViewController.swift */; };
 		EE71AF421CD311B500133034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF411CD311B500133034 /* Main.storyboard */; };
 		EE71AF581CD32F7600133034 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF571CD32F7600133034 /* ThirdViewController.swift */; };
+		EE8281451CE5AF9E00BFCB42 /* ButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8281431CE5AF9E00BFCB42 /* ButtonViewCell.swift */; };
+		EE8281461CE5AF9E00BFCB42 /* ButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8281441CE5AF9E00BFCB42 /* ButtonViewCell.xib */; };
 		EE9E541D1CE30DDB0036B936 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */; };
 		EE9E541E1CE30DDB0036B936 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		EE71AF3C1CD3119100133034 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EE71AF411CD311B500133034 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EE71AF571CD32F7600133034 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EE8281431CE5AF9E00BFCB42 /* ButtonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewCell.swift; sourceTree = "<group>"; };
+		EE8281441CE5AF9E00BFCB42 /* ButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewCell.xib; sourceTree = "<group>"; };
 		EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		EE9E541C1CE30DDB0036B936 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +124,8 @@
 				EE309CB11CE1BF880038610C /* Header.h */,
 				EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */,
 				EE71AF1F1CD3103700133034 /* ViewController.swift */,
+				EE8281431CE5AF9E00BFCB42 /* ButtonViewCell.swift */,
+				EE8281441CE5AF9E00BFCB42 /* ButtonViewCell.xib */,
 				EE309CB41CE1CE9F0038610C /* ViewCell.swift */,
 				EE309CB51CE1CE9F0038610C /* ViewCell.xib */,
 				EE9E541B1CE30DDB0036B936 /* ImageViewCell.swift */,
@@ -203,6 +209,7 @@
 			files = (
 				EE71AF281CD3103700133034 /* LaunchScreen.storyboard in Resources */,
 				EE16A5A61CDC34B800788ACF /* BottomView.xib in Resources */,
+				EE8281461CE5AF9E00BFCB42 /* ButtonViewCell.xib in Resources */,
 				EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */,
 				EE71AF421CD311B500133034 /* Main.storyboard in Resources */,
 				EE71AF251CD3103700133034 /* Assets.xcassets in Resources */,
@@ -273,6 +280,7 @@
 				EE55A22C1CE31B0A00BE0177 /* CustomObj.swift in Sources */,
 				EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */,
 				EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */,
+				EE8281451CE5AF9E00BFCB42 /* ButtonViewCell.swift in Sources */,
 				EE16A5A41CDC339700788ACF /* BottomView.swift in Sources */,
 				EE71AF581CD32F7600133034 /* ThirdViewController.swift in Sources */,
 				EE71AF3D1CD3119100133034 /* SecondTableViewCell.swift in Sources */,
