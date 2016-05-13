@@ -12,7 +12,6 @@
 		EE16A5A61CDC34B800788ACF /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE16A5A51CDC34B800788ACF /* BottomView.xib */; };
 		EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE309CB41CE1CE9F0038610C /* ViewCell.swift */; };
 		EE309CB71CE1CE9F0038610C /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE309CB51CE1CE9F0038610C /* ViewCell.xib */; };
-		EE55A22C1CE31B0A00BE0177 /* CustomObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */; };
 		EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1D1CD3103700133034 /* AppDelegate.swift */; };
 		EE71AF201CD3103700133034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71AF1F1CD3103700133034 /* ViewController.swift */; };
 		EE71AF251CD3103700133034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE71AF241CD3103700133034 /* Assets.xcassets */; };
@@ -48,10 +47,8 @@
 		E65533417F4FACAF043E936B /* libPods-SwiftBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE16A5A31CDC339700788ACF /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		EE16A5A51CDC34B800788ACF /* BottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomView.xib; sourceTree = "<group>"; };
-		EE309CB11CE1BF880038610C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		EE309CB41CE1CE9F0038610C /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		EE309CB51CE1CE9F0038610C /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
-		EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObj.swift; sourceTree = "<group>"; };
 		EE71AF1A1CD3103700133034 /* SwiftBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE71AF1D1CD3103700133034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE71AF1F1CD3103700133034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,8 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				EE71AF1D1CD3103700133034 /* AppDelegate.swift */,
-				EE309CB11CE1BF880038610C /* Header.h */,
-				EE55A22B1CE31B0A00BE0177 /* CustomObj.swift */,
 				EE71AF1F1CD3103700133034 /* ViewController.swift */,
 				EE8281431CE5AF9E00BFCB42 /* ButtonViewCell.swift */,
 				EE8281441CE5AF9E00BFCB42 /* ButtonViewCell.xib */,
@@ -277,7 +272,6 @@
 				EE9E541D1CE30DDB0036B936 /* ImageViewCell.swift in Sources */,
 				EE71AF201CD3103700133034 /* ViewController.swift in Sources */,
 				EE71AF1E1CD3103700133034 /* AppDelegate.swift in Sources */,
-				EE55A22C1CE31B0A00BE0177 /* CustomObj.swift in Sources */,
 				EE71AF401CD3119100133034 /* TabBarViewController.swift in Sources */,
 				EE309CB61CE1CE9F0038610C /* ViewCell.swift in Sources */,
 				EE8281451CE5AF9E00BFCB42 /* ButtonViewCell.swift in Sources */,
